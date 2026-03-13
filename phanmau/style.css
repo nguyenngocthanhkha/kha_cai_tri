@@ -1,40 +1,239 @@
 body{
 font-family:Arial;
-background:#079854;
 margin:0;
-padding:20px;
+background:#e4f0ec;
 }
 
-h1{
+.topbar{
+background:#333;
+color:white;
+padding:8px;
+text-align:right;
+}
+
+.navbar{
+background:#ff7a00;
+color:white;
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:5px 20px;
+height:50px;
+}
+
+.menu a{
+color:white;
+margin-left:15px;
+text-decoration:none;
+}
+
+.layout{
+display:flex;
+}
+
+.sidebar{
+width:240px;
+background:#f3f3f3;
+padding:20px 10px;
+border-right:1px solid #ddd;
+}
+
+.sidebar ul{
+list-style:none;
+padding:0;
+margin-top:40px;
+}
+.sidebar li{
+display:flex;
+align-items:center;
+gap:10px;
+margin:12px 0;
+font-size:16px;
+font-weight:500;
+padding:10px;
+border-radius:8px;
+cursor:pointer;
+transition:0.2s;
+}
+
+.sidebar li:hover{
+background:#ff7a00;
+color:white;
+transform:translateX(4px);
+}
+.sidebar li:hover{
+background:#ff7a00;
+color:white;
+transform:translateX(3px);
+}
+.main{
+flex:1;
+padding:30px;
 text-align:center;
 }
+.search{
+margin:20px;
+display:flex;
+justify-content:center;
+align-items:center;
+gap:10px;
+}
 
-.container{
+.search input{
+padding:12px;
+width:350px;
+border:1px solid #ccc;
+border-right:none;
+border-radius:6px 0 0 6px;
+font-size:15px;
+}
+.search button{
+padding:10px 15px;
+background:#ff7a00;
+color:white;
+border:none;
+}
+
+.foods{
 display:flex;
 flex-wrap:wrap;
 gap:20px;
 justify-content:center;
 }
-
 .card{
-background:rgb(83, 10, 10);
-width:250px;
-border-radius:10px;
+background:white;
+width:350px;
+border-radius:12px;
 overflow:hidden;
-box-shadow:0 2px 10px rgba(0,0,0,0.2);
+box-shadow:0 3px 10px rgba(0,0,0,0.15);
+transition:0.3s;
+cursor:pointer;
 }
-
 .card img{
 width:100%;
 height:150px;
 object-fit:cover;
+transition:0.3s;
 }
 
+.card:hover{
+transform:translateY(-6px);
+box-shadow:0 8px 20px rgba(0,0,0,0.25);
+}
+.card:hover img{
+transform:scale(1.05);
+}
 .card h3{
-padding:10px;
-margin:0;
+margin:10px;
 }
 
 .card p{
-padding:0 10px 10px;
+margin:10px;
+color:#555;
+}
+.main h1{
+margin-bottom:8px;
+}
+
+.main p{
+margin-top:0;
+}
+.sidebar-note{
+margin-top:40px;
+font-size:14px;
+color:#777;
+line-height:1.5;
+}
+.user-name{
+font-weight: bold;
+color: white;
+background: #ff5722;
+padding: 6px 14px;
+border-radius: 20px;
+box-shadow: 0 2px 8px rgba(0,0,0,0.3);
+margin-right: 10px;
+}
+/* trang đăng nhập */
+
+.login-page{
+background: url("../images/anhnen.jpg") center center no-repeat;
+background-size: cover;
+height:100vh;
+display:flex;
+justify-content:center;
+align-items:center;
+}
+.login-container{
+background:transparent;
+padding:40px;
+width:320px;
+border-radius:12px;
+box-shadow:0 10px 25px rgba(0,0,0,0.2);
+text-align:center;
+}
+
+.login-container h2{
+margin-bottom:20px;
+}
+
+.login-container input{
+width:100%;
+padding:10px;
+margin:10px 0;
+border:1px solid #ccc;
+border-radius:6px;
+}
+
+.login-container button{
+width:100%;
+padding:10px;
+background:#e07307;
+color:white;
+border:none;
+border-radius:6px;
+font-size:16px;
+cursor:pointer;
+}
+
+.login-container button:hover{
+background:#e66f00;
+}
+
+.login-container a{
+color:#ff7e00;
+text-decoration:none;
+font-weight:bold;
+}
+.form-group{
+display:flex;
+align-items:center;
+margin:10px 0;
+}
+
+.form-group label{
+width:130px;
+font-weight:bold;
+}
+
+.form-group input{
+flex:1;
+padding:8px;
+border-radius:6px;
+border:1px solid #ccc;
+}
+.login-container{
+background:transparent;   /* bỏ nền */
+border-radius:12px;
+padding:40px;
+}
+
+.login-container h2,
+.form-group label,
+.login-container p{
+color:white;   /* chữ trắng */
+}
+
+.login-container a{
+color:#c15c0e; /* màu nổi cho chữ Đăng ký */
+font-weight:bold;
 }
